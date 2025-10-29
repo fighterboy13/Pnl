@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WELCOME TO YK TRICKS INDIA - FULL PANEL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700,500,400&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height:100%; margin:0; padding:0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: url('https://i.ibb.co/2XxDZGX/7892676.png') center center / cover no-repeat fixed;
+    }
+    .page { min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:36px 18px; gap:18px; }
+    .main-title { margin-top:8px; margin-bottom:24px; font-size:2.1rem; font-weight:800; text-align:center; color:#fff; }
+    .tools-wrap { width:100%; max-width:820px; display:flex; flex-direction:column; gap:16px; align-items:stretch; }
+    .tool-card { display:flex; align-items:center; padding:18px 20px; border-radius:12px; border:1.5px solid rgba(255,255,255,0.12);
+                background: rgba(0,0,0,0.18); color:#fff; font-weight:700; cursor:pointer; transition:transform .14s; }
+    .tool-card:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.6); }
+    .tool-icon { width:56px; height:56px; border-radius:10px; background-size:cover; margin-right:14px; flex:0 0 56px; }
+    .tool-label .title { font-size:1.05rem; font-weight:800; } .tool-label .subtitle { font-size:0.88rem; opacity:0.9; }
+    .about-btn { margin:14px auto 0; padding:10px 18px; border-radius:10px; font-weight:700; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); }
+    .modal, .about-modal { position:fixed; top:0; left:0; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.75); z-index:9999; opacity:0; pointer-events:none; transition:opacity .18s; }
+    .modal.show, .about-modal.show { opacity:1; pointer-events:auto; }
+    .modal-content { width:92vw; max-width:980px; max-height:86vh; overflow-y:auto; background:rgba(10,10,14,0.96); border-radius:12px; padding:18px; color:#fff; border:1px solid rgba(255,255,255,0.03); }
+    .close-btn { position:absolute; top:10px; right:12px; background:#ff4b4b; color:#fff; border:none; width:36px; height:36px; border-radius:50%; cursor:pointer; }
+    .feature-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:12px; margin-top:12px; }
+    .feature-card { background:rgba(255,255,255,0.02); padding:12px; border-radius:10px; display:flex; gap:10px; align-items:center; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="main-title">YK TRICKS INDIA - COMPLETE PANEL</div>
+    <div class="tools-wrap" role="region" aria-label="tools">
+      <div class="tool-card" onclick="window.open('https://facebook.com','_blank')">
+        <div class="tool-icon" style="background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');"></div>
+        <div class="tool-label"><div class="title">FACEBOOK TOOLS</div><div class="subtitle">Pages, groups, automation, comments, ads</div></div>
+      </div>
+      <div class="tool-card" onclick="window.open('https://instagram.com','_blank')">
+        <div class="tool-icon" style="background-image:url('https://i.imgur.com/ZYUdbZC.jpg');"></div>
+        <div class="tool-label"><div class="title">INSTAGRAM TOOLS</div><div class="subtitle">DMs, group tools, name changer, recovery</div></div>
+      </div>
+      <div class="tool-card" onclick="window.open('https://web.whatsapp.com','_blank')">
+        <div class="tool-icon" style="background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');"></div>
+        <div class="tool-label"><div class="title">WHATSAPP TOOLS</div><div class="subtitle">Bulk, scheduling, bots, group utilities</div></div>
+      </div>
+    </div>
+
+    <button class="about-btn" onclick="showFeatureModal()">EXPLORE PREMIUM FEATURES</button>
+  </div>
+
+  <!-- Modal: full long features list -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closeFeatureModal()">×</button>
+      <h2 style="text-align:center; color:#ff7a85;">PREMIUM FEATURES - FULL LIST</h2>
+      <p style="opacity:0.85;">Below is a long exhaustive list (repeated for demo) — everything included exactly as requested.</p>
+      <div class="feature-grid">
+        <div class="feature-card" onclick="window.open('https://example.com/feature-1','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #1 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 1. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-2','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #2 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 2. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-3','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #3 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 3. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-4','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #4 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 4. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-5','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #5 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 5. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-6','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #6 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 6. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-7','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #7 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 7. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-8','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #8 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 8. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-9','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #9 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 9. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-10','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #10 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 10. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-11','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #11 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 11. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-12','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #12 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 12. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-13','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #13 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 13. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-14','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #14 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 14. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-15','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #15 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 15. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-16','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #16 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 16. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-17','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #17 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 17. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-18','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #18 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 18. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-19','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #19 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 19. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-20','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #20 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 20. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-21','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #21 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 21. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-22','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #22 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 22. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-23','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #23 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 23. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-24','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://i.imgur.com/ZYUdbZC.jpg');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #24 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 24. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-25','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2017/01/17/15/28/whatsapp-1984586_1280.png');background-size:cover;"></div>
+          <div>
+            <div style="font-weight:800;">Feature #25 - Detailed Tool</div>
+            <div style="opacity:0.86;font-size:0.92rem;">This is an exhaustive description for feature number 25. Includes automation, scheduling, recovery, group management and advanced utilities.</div>
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.open('https://example.com/feature-26','_blank')">
+          <div style="width:54px;height:54px;border-radius:10px;background-image:url('https://cdn.pixabay.com/photo/2016/04/15/11/46/facebook-1327866_1280.png');background-size:cover;"></div>
+  
